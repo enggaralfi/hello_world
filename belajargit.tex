@@ -1,0 +1,113 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Enggar Alfianto}
+\title{Belajar Github}
+\begin{document}
+\maketitle
+\section{Membuat Repositori baru}
+Repository biasanya digunakan untuk mengatur proyek tunggal. Repositori dapat berisi folder dan file, gambar, video, spreadsheets dan data set - atau apa saja yang dibutuhkan dalam proyek tersebut. Direkomendasikan terdapat file README atau file yang memiliki informasi apapun tentang proyek yang dibuat. 
+
+Repositori "hello-world" dapat diletakkan dimanapun.
+\subsection*{Membuat repository baru}
+\begin{enumerate}
+\item Pada bagian pojok kanan atas, klik tanda "+" dan pilih \textbf{New repository.}
+\item Namai repositori baru dengan "hello-world"
+\item Tulis deskripsi singkat
+\item Centang \textbf{Initialize this repository with a README.}
+\begin{figure}[h!]
+\includegraphics[scale=0.5]{image/create.png} 
+\end{figure}
+\item Klik \textbf{Create repository}
+\end{enumerate}
+
+\section{Membuat cabang (\textit{branch})}
+branch merupakan cara untuk bekerja dengan banyak versi repository pada saat yang sama
+
+Semula, repository hanya memiliki satu cabang dengan nama "master"yang merupakan cabang utama. Kita mengunakan branch untuk melakukan percobaan dan melakukan perubahan sebelum memasukkannya (\textit{commiting}) ke dalam "master". 
+
+ketika kita membuat cabang dari master, artinya kita membuat duplikat dari master. Jika ada orang lain yang bekerja pada master dan kita bekerja pada branch, kita harus menarik (pull) update tersebut.
+
+Diagram ini menunjukkan:
+\begin{itemize}
+\item cabang (\textit{branch}) "master"
+\item Cabang baru yang bernama "feature" (karena kita akan bekerja pada cabang itu)
+\item berikutnya "feature" akan digabung kedalam cabang "master"
+\begin{figure}[h!]
+\includegraphics[scale=0.5]{image/branch.png} 
+\end{figure}
+\end{itemize} 
+
+Sering kali kita membuat versi file berbeda saat bekerja, misalnya:
+\begin{itemize}
+\item Tugas.txt
+\item Tugas-enggar-edit.txt
+\item Tugas-enggar-edit-perbaikan.txt
+\end{itemize}
+
+Cabang (\textit{branch}) mengerjakan hal yang sama pada repositori GitHub.
+
+Di GitHub, developer, writer, dan desainer menggunakan branch untuk menjaga perbaikan bug dan pekerjaan berikutnya dari cabang "master". Ketika perubahan telah siap dan bagus mereka menyatukannya kembali dalam cabang "master".
+
+\subsection*{Membuat cabang (\textit{branch}) baru}
+\begin{enumerate}
+\item Masuk ke dalam repositori "hello-world"
+\item klik pilihan "branch:master"
+\item ketikan nama cabang baru "readme-edits"
+\item Pilih tombol biru \textbf{Create branch} atau tekan enter pada keyboard.
+\end{enumerate}   
+Saat ini telah tersedia dua branch yaitu "master" dan "readme-edits".
+
+\section{Membuat dan memasukkan (\textit{commit} perubahan}
+Mantab, saat ini kita berada dalam tampilan cabang "readme-edits", yang mana adalah copy dari "master". Buatlah sedikit perubahan.
+
+Pada GitHub, menyimpan perubahan disebut "commits", setiap "commit" memiliki pesan, yang merupakan deskripsi dan penjelasan mengapa ada perubahan yang dilakukan. Pesan commit menyimpan sejarah dari perubahan yang dilakukan, sehingga kontributor lain dapat memahami tentang apa yang telah diselesaikan dan mengapa hal itu dilakukan.
+
+\subsection*{Membuat dan memasukkan (\textit{commit}) perubahan}
+
+\begin{enumerate}
+\item Klik "README.md"
+\item klik gambar pensil pada bagian sudut kanan atas pada tampilan file untuk mengedit
+\item Pada editor, tulis sembarang tentang dirimu.
+\item tulis pesan commit yang mendeskripsikan perubahan
+\item klik tombol \textbf{Commit changes}
+\begin{figure}[h!]
+\includegraphics[scale=0.5]{image/commit.png} 
+\end{figure}
+\end{enumerate}
+Perubahan ini hanya dilakukan di dalam file README yang berada pada cabang "readme-edits", sehingga sekarang ada perbedaan antara cabang "master" dan "readme-edits"
+
+\section{Buka permintaan tarik (\textit{pull})}
+Sekarang kita telah berada pada cabang "master", kita dapat membuka permintaan penarikan (\textit{pull}).
+
+Permintaan "pull" merupakan jantung dari kerja secara kolaborasi di GitHub. Ketika kita membuka permintaan pull, itu artinya kita mengajukan perubahan dan meminta sesorang untuk mereview dan menarik kontribusi kita kemudian disatukan dengan cabang mereka. Perubahan, penambahan dan pengurangan ditunjukkan dengan warna hijau dan merah.
+
+Segera setelah kita membuat commit, kita dapat membuka permintaan pull dan memulai diskusi, meskipun code belum terselesaikan.
+
+Dengan menggunakan GitHub @mentionSystem pada pesan permintaan pull, kita dapat meminta timbal balik dari seorang atau tim.
+
+Kita dapat menarik \textit{pull} permintaan pada repositori sendiri dan menggabungkannya. Itu adalah cara terbaik untuk memahami alur Github sebelum bekerja pada proyek besar.
+
+\subsection*{Membuka permintaan Pull (\textit{Pull Request})}
+
+\begin{enumerate}
+\item Kllik tab \textbf{Pull Request}, kemudian dari halaman Pull Request klik tombol hijau \textbf{Pull Request}.
+\item Pada bagian \textbf{Example Comparisons}, pilih cabang yang telah dibuat, "readme-edits", untuk dibandingkan dengan "master"(aslinya)
+\item Lihat perubahan yang telah dibuat dari laman perbandingan, pastikan itu adalah yang akan disubmit. 
+\item Jika sudah mantab dengan perubahan yang telah dibuat, klik tombol besar berwarna hijau bertuliskan \textbf{Pull Request}.
+\item berilah judul pada \textit{pull reques yang telah dibuat}, berilah catatan kecil tentang perubahan yang dilakukan.
+\item Jika sudah selesai dengan pesannya, klik \textbf{Create Pull Request}.
+\end{enumerate}
+
+\section{Menyatukan Pull Request}
+Pada bagian terakhir ini, akan digabungkan cabang "readme-edits" dan cabang "master".
+\begin{enumerate}
+\item Klik tombol hijau \textbf{Merge pull request} untuk mengubah cabang "master"
+\item Klik \textbf{confirm merge}
+\item Hapus cabang yang sudah digabung.
+\end{enumerate}
+\end{document}
